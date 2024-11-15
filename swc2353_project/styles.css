@@ -1,0 +1,504 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('assets/A_gym_aesthetic_background_featuring_a_modern,_dim.png'); /* Adjust path if necessary */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #767BE3;
+}
+
+/* Container */
+.section__container {
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  color: #ffffff; /* White text for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  width: 100%;
+  color: #000000;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 2rem;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 90%; 
+    max-width: 300px;
+    margin: auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.price__card {
+    min-width: 100%;
+    max-width: 320px;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.prev-btn, .next-btn {
+    background-color: #767BE3;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure buttons appear on top */
+    width: 3rem; /* Increase size for better visibility */
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn {
+    left: -2rem;
+}
+
+.next-btn {
+    right: -2rem;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #6E56B3;
+}
+
+/* Locations Section Styles */
+.locations__container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  color: #fff; /* White text for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.locations-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+  justify-content: space-between; /* Space out items evenly */
+}
+
+.locations-list li {
+  margin: 1rem; /* Space between locations */
+  flex: 1 1 200px; /* Allow items to grow and shrink, with a base width */
+  max-width: 300px; /* Limit the maximum width of each location item */
+  background: rgba(255, 255, 255, 0.1); /* Optional: Add a background for better visibility */
+  padding: 1rem; /* Padding for each location item */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Transition for scaling effect */
+}
+
+.locations-list h3 {
+  margin: 0; /* Remove margin for h3 */
+  color: #6758cb; /* Highlight location names */
+  position: relative; /* Position relative for the icon */
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.location-icon {
+  margin-right: 0.5rem; /* Space between icon and text */
+  transition: transform 0.3s ease; /* Transition for icon animation */
+}
+
+/* Hover Effect */
+.locations-list li:hover {
+  transform: scale(1.05); /* Scale up the entire location item on hover */
+}
+
+.locations-list li:hover h3 {
+  color: #b8b0ef; /* Change color on hover */
+}
+
+.locations-list li:hover .location-icon {
+  transform: scale(1.2 ); /* Scale up the icon on hover */
+}
+
+/* Button Styles for Member Login */
+.login-btn {
+  background-color: #9a87d4; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 0.5rem 1rem; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.login-btn:hover {
+  background-color: #774a9f; /* Darker shade on hover */
+}
+
+.success-message {
+  background-color: #dff0d8; /* Light green background */
+  color: #3c763d; /* Dark green text */
+  padding: 10px;
+  border: 1px solid #d6e9c6; /* Border color */
+  border-radius: 5px;
+  margin: 20px 0; /* Margin for spacing */
+  text-align: center; /* Center the text */
+}
+
+
+.nav__links li a {
+  text-decoration: none;
+  color: #6E56B3;
+  font-weight: bold;
+}
+
+.nav__links li a:hover {
+  color: #aa46f654;
+}
+
+/* Sign-Up Button Styling */
+.signup-link .signup-btn {
+  background-color: #ff6347; /* Bright color to stand out */
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.signup-link .signup-btn:hover {
+  background-color: #e55342; /* Darker shade on hover */
+  transform: scale(1.1); /* Pop-out effect */
+}
+
+.signup-link .signup-btn:active {
+  transform: scale(1); /* Reset on click */
+}
+
+/* Header Image and Content */
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.header__image img {
+  width: 400px;
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.header__content p {
+  margin-bottom: 1.5rem;
+}
+
+.header__btn .btn {
+  background-color: #767BE3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.header__btn .btn:hover {
+  background-color: #6E56B3;
+}
+
+/* About Section */
+.about__container {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.about__image img {
+  max-width: 100%;
+}
+
+.about__content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.about__card span i {
+  font-size: 2rem;
+  color: #767BE3;
+}
+
+.signup-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Sign-Up Form */
+.signup__form {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup__form h1 {
+  font-size: 2.5rem;
+  color: #767BE3;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.signup__form p {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form__group {
+  margin-bottom: 1.5rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.price__card .btn {
+  background-color: #767BE3;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form__group input,
+.form__group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form__group input:focus,
+.form__group select:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+.form__group .btn {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.form__group .btn:hover {
+  background-color: #e55342;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__col {
+  width: 25%;
+}
+
+.footer__logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer__links a {
+  display: block;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: #203D64;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  margin-top: 2rem;
+}
+
+/* Swiper Navigation Buttons for Pricing Slideshow */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for better visibility */
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.swiper-button-next {
+  right: 15px; /* Adjust spacing from the right */
+}
+
+.swiper-button-prev {
+  left: 15px; /* Adjust spacing from the left */
+}
+
+/* Hover Effect for Buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* Centering the Swiper Pagination Dots */
+.swiper-pagination {
+  bottom: 10px; /* Adjusts spacing from the bottom */
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Pagination Dot Style */
+.swiper-pagination-bullet {
+  background-color: #767BE3;
+  opacity: 1;
+  transition: transform 0.2s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ff6347;
+  transform: scale(1.2); /* Slightly enlarges the active dot */
+}
+
+/* Responsive Design */
+@media screen and (max-width : 1202px ){
+  .nav__links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .about__container, .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about__container, .footer__col {
+    width: 100%;
+  }
+}
